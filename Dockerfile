@@ -8,7 +8,7 @@ RUN apt-get update && \
         libmemcached-dev \
         libz-dev \
         libjpeg-dev \
-        libpng12-dev \
+        libpng-dev \
         libfreetype6-dev \
         libssl-dev \
         libmcrypt-dev \
@@ -23,7 +23,6 @@ RUN apt-get purge --auto-remove -y zlib1g-dev \
             libfreetype6-dev \
             libjpeg62-turbo-dev \
             libmcrypt-dev \
-            libpng12-dev \
         && docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
         && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
         && docker-php-ext-install imap \
