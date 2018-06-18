@@ -12,6 +12,8 @@ RUN apt-get update && \
         libfreetype6-dev \
         libssl-dev \
         libmcrypt-dev \
+        libpq-dev \
+        libjpeg62-turbo-dev \
         git \
         mysql-client
 
@@ -31,7 +33,6 @@ RUN apt-get purge --auto-remove -y zlib1g-dev \
         && docker-php-ext-install opcache \
         && docker-php-ext-install pdo_mysql \
         && docker-php-ext-install mcrypt
-
 
 #####################################
 # OpCahce
